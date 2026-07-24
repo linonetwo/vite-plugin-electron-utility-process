@@ -1,0 +1,52 @@
+{
+  "name": "vite-plugin-electron-utility-process",
+  "version": "1.0.0",
+  "description": "Vite plugin for ?utilityProcess imports — emits Electron UtilityProcess entry chunks with a fork() factory",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run clean && npm run build",
+    "clean": "rimraf ./dist",
+    "check": "tsc --noEmit --skipLibCheck",
+    "lint": "eslint ./src --ext js,ts,tsx,json",
+    "lint:fix": "eslint ./src --ext ts,tsx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linonetwo/vite-plugin-electron-utility-process.git"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "electron",
+    "utility-process",
+    "utilityProcess",
+    "fork"
+  ],
+  "author": "lin onetwo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linonetwo/vite-plugin-electron-utility-process/issues"
+  },
+  "homepage": "https://github.com/linonetwo/vite-plugin-electron-utility-process#readme",
+  "peerDependencies": {
+    "vite": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.0"
+  }
+}
