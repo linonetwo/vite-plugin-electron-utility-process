@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-electron-utility-process",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vite plugin for ?utilityProcess imports — emits Electron UtilityProcess entry chunks with a fork() factory",
   "type": "module",
   "main": "dist/cjs/index.js",
@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && tsc -p tsconfig.cjs.json",
+    "build": "tsc && tsc -p tsconfig.cjs.json && echo {\"type\":\"commonjs\"} > dist/cjs/package.json",
     "prepublishOnly": "npm run clean && npm run build",
     "clean": "rimraf ./dist",
     "check": "tsc --noEmit --skipLibCheck",
